@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <title>{{meta_title}}</title>
+    <meta name="author" content="{{author.name}}">
+    <meta name="description" content="{{meta_description}}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+    
+    <!-- Le styles -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{asset "css/style.css"}}" rel="stylesheet">
+    <link href="{{asset "css/syntax.css"}}" rel="stylesheet">
+    
+    <!-- Le theme options -->
+    <script type="text/javascript" src="/options.js"></script>
+    
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+    
+  </head>
+  <body class="{{body_class}}">
+    <nav class="navbar navbar-default visible-xs" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+        <script>
+          
+          if(site.author.github)
+            document.write('<a class="navbar-toggle nav-link" href="http://github.com/'+site.author.github+'"><i class="fa fa-github"></i></a>');
+          
+          if(site.author.twitter)
+            document.write('<a class="navbar-toggle nav-link" href="http://twitter.com/'+site.author.twitter+'"><i class="fa fa-twitter"></i></a>');
+          
+          if(site.author.email)
+            document.write('<a class="navbar-toggle nav-link" href="mailto:'+site.author.email+'"><i class="fa fa-envelope"></i></a>');
+        </script>
+        
+        
+        <a class="navbar-brand" href="{{ site.BASE_PATH }}/">
+          <img src="{{@blog.logo}}" class="img-circle" />
+          {{@blog.title}}
+        </a>
+      </div>
+      
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="{{ site.BASE_PATH }}/">Home</a></li>
+          <li><a href="/categories">Categories</a></li>
+          <li><a href="/tags">Tags</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </nav>
+    
+    <!-- nav-menu-dropdown -->
+    <div class="btn-group hidden-xs" id="nav-menu">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        <i class="fa fa-bars"></i>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="{{@blog.url}}/"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="/categories"><i class="fa fa-folder"></i> Categories</a></li>
+        <li><a href="/tags"><i class="fa fa-tags"></i> Tags</a></li>
+        <li class="divider"></li>
+        <li><a href="#"><i class="fa fa-arrow-up"></i> Top of Page</a></li>
+      </ul>
+    </div>
+    
+    <div class="col-sm-3 sidebar hidden-xs">
+      
+      <header class="sidebar-header" role="banner">
+        <a href="{{@blog.url}}">
+          <img src="{{@blog.logo}}" class="img-circle" />
+        </a>
+        <h3 class="title">
+          <a href="{{@blog.url}}/">{{@blog.title}}</a>
+        </h3>
+      </header>
+      
+      <div id="bio" class="text-center">
+        {{@blog.description}}
+      </div>
+      
+      <div id="contact-list" class="text-center">
+        <ul class="list-unstyled list-inline">
+          <script>
+            
+            
+            
+            if(site.author.github)
+              document.write('<li><a class="btn btn-default btn-sm" href="http://github.com/'+site.author.github+'"><i class="fa fa-github fa-lg"></i></a></li>');
+            
+            if(site.author.twitter)
+              document.write('<li><a class="btn btn-default btn-sm" href="http://twitter.com/'+site.author.twitter+'"><i class="fa fa-twitter fa-lg"></i></a></li>');
+            
+            if(site.author.email)
+              document.write('<li><a class="btn btn-default btn-sm" href="mailto:'+site.author.email+'"><i class="fa fa-envelope fa-lg"></i></a></li>');
+          </script>
+        </ul>
+        <ul id="contact-list-secondary" class="list-unstyled list-inline">
+          <script>
+            
+            if(site.author.pinterest)
+              document.write('<li><a class="btn btn-default btn-sm" href="https://pinterest.com/'+site.author.pinterest+'"><i class="fa fa-pinterest fa-lg"></i></a></li>');
+            
+            if(site.author.linkedin)
+              document.write('<li><a class="btn btn-default btn-sm" href="https://linkedin.com/in/'+site.author.linkedin+'"><i class="fa fa-linkedin fa-lg"></i></a></li>');
+          </script>
+          <li>
+            <a class="btn btn-default btn-sm" href="{{@blog.url}}/rss">
+              <i class="fa fa-rss fa-lg"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    {{! Everything else gets inserted here }}
+    
+    <div class="col-sm-9 col-sm-offset-3">
+      {{{body}}}
+      
+      
+      <footer class="site-footer">
+        <div class="inner">
+          <section class="copyright">
+            <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}}
+            with <a href="#">dbyll</a> theme on <a class="icon-ghost" href="http://ghost.org">Ghost</a>.
+          </section>
+        </div>
+      </footer>
+      
+      {{! Ghost outputs important scripts and data with this tag }}
+      {{ghost_foot}}
+    </div>
+    
+    <div class="clearfix"></div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <script type="text/javascript" src="{{asset "js/app.js"}}"></script>
+    
+  </body>
+</html>
