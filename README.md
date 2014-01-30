@@ -1,4 +1,4 @@
-# Casper
+# Dbyll
 
 Port of the open source Jekyll theme [dbyll](https://github.com/dbtek/dbyll).
 
