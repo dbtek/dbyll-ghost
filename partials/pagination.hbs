@@ -1,0 +1,27 @@
+<nav role="pagination">
+  <ul class="pager">
+
+      {{#if prev}}
+        <li class="previous">
+          <a href="{{pageUrl prev}}">&larr; Newer</a>
+        </li>
+      {{else}}
+        <li class="previous disabled">
+          <a>&larr; Newer</a>
+        </li>
+      {{/if}}
+
+    <li>
+      <span class="page-number">Page {{page}} of {{pages}}</span>
+    </li>
+
+    {{#if next}}
+      <li class="next">
+        <a href="{{pageUrl next}}">Older &rarr;</a>
+      </li>
+    {{else}}
+      <li class="next">
+        <a>Older &rarr;</a>
+      </li>
+    {{/if}}
+  </nav>
