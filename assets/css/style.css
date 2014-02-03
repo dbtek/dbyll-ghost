@@ -46,7 +46,7 @@ article {
 
 .post-date {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 3px;
 }
 
@@ -77,4 +77,8 @@ footer .inner { padding-left: 20px; }
 
 .pager li a, .pager li span {
   border-radius: 4px;
+}
+
+.home-content {
+  margin-top: 40px;
 }
