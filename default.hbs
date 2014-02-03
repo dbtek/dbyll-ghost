@@ -33,12 +33,6 @@
     <nav class="navbar navbar-default visible-xs" role="navigation">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#dbyll-navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
         
         <script>
           
@@ -58,31 +52,9 @@
           {{@blog.title}}
         </a>
       </div>
-      
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="dbyll-navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="{{ site.BASE_PATH }}/">Home</a></li>
-          <li><a href="/categories">Categories</a></li>
-          <li><a href="/tags">Tags</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
+
     </nav>
-    
-    <!-- nav-menu-dropdown -->
-    <div class="btn-group hidden-xs" id="nav-menu">
-      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-        <i class="fa fa-bars"></i>
-      </button>
-      <ul class="dropdown-menu" role="menu">
-        <li><a href="{{@blog.url}}/"><i class="fa fa-home"></i> Home</a></li>
-        <li><a href="/categories"><i class="fa fa-folder"></i> Categories</a></li>
-        <li><a href="/tags"><i class="fa fa-tags"></i> Tags</a></li>
-        <li class="divider"></li>
-        <li><a href="#"><i class="fa fa-arrow-up"></i> Top of Page</a></li>
-      </ul>
-    </div>
-    
+
     <div class="col-sm-3 sidebar hidden-xs">
       
       <header class="sidebar-header" role="banner">
@@ -100,10 +72,8 @@
       
       <div id="contact-list" class="text-center">
         <ul class="list-unstyled list-inline">
+
           <script>
-            
-            
-            
             if(site.author.github)
               document.write('<li><a class="btn btn-default btn-sm" href="http://github.com/'+site.author.github+'"><i class="fa fa-github fa-lg"></i></a></li>');
             
@@ -113,16 +83,18 @@
             if(site.author.email)
               document.write('<li><a class="btn btn-default btn-sm" href="mailto:'+site.author.email+'"><i class="fa fa-envelope fa-lg"></i></a></li>');
           </script>
+
         </ul>
         <ul id="contact-list-secondary" class="list-unstyled list-inline">
+
           <script>
-            
             if(site.author.pinterest)
               document.write('<li><a class="btn btn-default btn-sm" href="https://pinterest.com/'+site.author.pinterest+'"><i class="fa fa-pinterest fa-lg"></i></a></li>');
             
             if(site.author.linkedin)
               document.write('<li><a class="btn btn-default btn-sm" href="https://linkedin.com/in/'+site.author.linkedin+'"><i class="fa fa-linkedin fa-lg"></i></a></li>');
           </script>
+
           <li>
             <a class="btn btn-default btn-sm" href="{{@blog.url}}/rss">
               <i class="fa fa-rss fa-lg"></i>
