@@ -10,6 +10,10 @@ var site = {
     twitter: "abc123",
     pinterest: "abc123",
     linkedin: "abc123"
+  },
+
+  disqus: {
+    shortname: ''
   }
   
 }
