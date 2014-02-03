@@ -2,7 +2,7 @@
 
 {{! The main content area on the homepage }}
 
-<main class="content home-content" role="main">
+<main class="content home-content col-sm-10" role="main">
   {{#foreach posts}}
 
   <article class="home">
@@ -21,9 +21,8 @@
 
   {{/foreach}}
 
-  <div class="col-sm-10">
-    {{pagination}}
-  </div>
+  {{pagination}}
 
-  <div class="clearfix"></div>
 </main>
+
+<div class="clearfix"></div>
