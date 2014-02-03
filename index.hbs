@@ -11,21 +11,24 @@
   {{#foreach posts}}
 
   <article class="home">
-    <header class="post-header">
+    <div class="post-header">
       <span class="post-date">
         <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
       </span>
       <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
 
-    </header>
-    <section class="post-excerpt">
+    </div>
+    <section class="post-excerpt col-sm-10">
       <p>{{excerpt}}&hellip;</p>
     </section>
+    <div class="clearfix"></div>
   </article>
 
   {{/foreach}}
 
-  {{!! After all the posts, we have the previous/next pagination links }}
-  {{pagination}}
+  <div class="col-sm-10">
+    {{pagination}}
+  </div>
 
+  <div class="clearfix"></div>
 </main>
