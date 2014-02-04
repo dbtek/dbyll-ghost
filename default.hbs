@@ -22,30 +22,23 @@
     <link href="{{asset "css/style.css"}}" rel="stylesheet">
     <link href="{{asset "css/syntax.css"}}" rel="stylesheet">
     
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
     <!-- Le theme options -->
     <script type="text/javascript" src="/options.js"></script>
+    <script type="text/javascript" src="{{asset "js/siteOptions.js"}}"></script>
     
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
     
+    <style id="dbyll-options"></style>
+
+    <script type="text/javascript"> siteOptions.setStyles(); </script>
   </head>
   <body class="{{body_class}}">
     <nav class="navbar navbar-default visible-xs" role="navigation">
       <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        
-        <script>
-          
-          if(site.author.github)
-            document.write('<a class="navbar-toggle nav-link" href="http://github.com/'+site.author.github+'"><i class="fa fa-github"></i></a>');
-          
-          if(site.author.twitter)
-            document.write('<a class="navbar-toggle nav-link" href="http://twitter.com/'+site.author.twitter+'"><i class="fa fa-twitter"></i></a>');
-          
-          if(site.author.email)
-            document.write('<a class="navbar-toggle nav-link" href="mailto:'+site.author.email+'"><i class="fa fa-envelope"></i></a>');
-        </script>
-        
+      <div class="navbar-header" id="mobile-contact-list">
         
         <a class="navbar-brand" href="{{ site.BASE_PATH }}/">
           <img src="{{@blog.logo}}" class="img-circle" style="width: 35px; height: 35px">
@@ -55,8 +48,11 @@
 
     </nav>
 
-    <div class="col-sm-3 sidebar hidden-xs">
-      
+    {{# if @blog.cover }}
+      <div class="col-sm-3 sidebar hidden-xs cover" style="background: url({{@blog.cover}});">
+    {{else}}
+      <div class="col-sm-3 sidebar hidden-xs">
+    {{/if}}
       <header class="sidebar-header" role="banner">
         <a href="{{@blog.url}}">
           <img src="{{@blog.logo}}" class="img-circle" />
@@ -71,30 +67,8 @@
       </div>
       
       <div id="contact-list" class="text-center">
-        <ul class="list-unstyled list-inline">
-
-          <script>
-            if(site.author.github)
-              document.write('<li><a class="btn btn-default btn-sm" href="http://github.com/'+site.author.github+'"><i class="fa fa-github fa-lg"></i></a></li>');
-            
-            if(site.author.twitter)
-              document.write('<li><a class="btn btn-default btn-sm" href="http://twitter.com/'+site.author.twitter+'"><i class="fa fa-twitter fa-lg"></i></a></li>');
-            
-            if(site.author.email)
-              document.write('<li><a class="btn btn-default btn-sm" href="mailto:'+site.author.email+'"><i class="fa fa-envelope fa-lg"></i></a></li>');
-          </script>
-
-        </ul>
-        <ul id="contact-list-secondary" class="list-unstyled list-inline">
-
-          <script>
-            if(site.author.pinterest)
-              document.write('<li><a class="btn btn-default btn-sm" href="https://pinterest.com/'+site.author.pinterest+'"><i class="fa fa-pinterest fa-lg"></i></a></li>');
-            
-            if(site.author.linkedin)
-              document.write('<li><a class="btn btn-default btn-sm" href="https://linkedin.com/in/'+site.author.linkedin+'"><i class="fa fa-linkedin fa-lg"></i></a></li>');
-          </script>
-
+        <ul class="list-unstyled list-inline" id="contact-list-primary"></ul> <!-- filled with js -->
+        <ul id="contact-list-secondary" class="list-unstyled list-inline"> <!-- filled with js -->
           <li>
             <a class="btn btn-default btn-sm" href="{{@blog.url}}/rss">
               <i class="fa fa-rss fa-lg"></i>
@@ -124,8 +98,7 @@
     </div>
     
     <div class="clearfix"></div>
-    
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
     <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
     <script type="text/javascript" src="{{asset "js/app.js"}}"></script>

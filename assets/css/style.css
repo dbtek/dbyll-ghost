@@ -21,7 +21,10 @@ body{
 
 .sidebar-header .title a{
   text-decoration: none;
-  color: #2c3e50 !important;
+}
+
+.cover {
+  box-shadow: 0 0 10px;
 }
 
 #bio {
@@ -54,9 +57,9 @@ article.home div a, article.home a { color: #2c3e50; }
 article.home div a:hover, article.home a:hover { color: #2c3e50; text-decoration: none; }
 article img { max-width: 100%; }
 
-h1,h2,h3,h4,h5,h6 { font-family: 'Ubuntu', sans-serif; color: #f2756a !important; }
+/*h1,h2,h3,h4,h5,h6 { font-family: 'Ubuntu', sans-serif; }
 h1 a,h2 a,h3 a,h4 a { color: #f2756a !important; }
-h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover{ color: #e74c3c; }
+h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover{ color: #e74c3c; }*/
 
 footer {
   padding-top: 15px;
@@ -68,11 +71,9 @@ footer hr { margin: 0 }
 
 footer .inner { padding-left: 20px; }
 
-.badge { background: #F2756A; }
-
 .author .author-image {
-  float: right;
-  margin-left: 20px;
+  float: left;
+  margin-right: 20px;
 }
 
 .pager li a, .pager li span {
@@ -81,4 +82,8 @@ footer .inner { padding-left: 20px; }
 
 .home-content {
   margin-top: 40px;
+}
+
+.content {
+  padding-left: 30px;
 }
