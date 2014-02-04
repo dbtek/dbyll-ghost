@@ -20,7 +20,9 @@ var site = {
   },
 
   disqus: {
-    shortname: ''
-  }
+    shortname: 'dbyll-ghost'
+  },
+
+  analyticsTrackId: 'UA-46512232-5'
   
 }

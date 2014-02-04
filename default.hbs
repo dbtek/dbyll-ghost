@@ -11,9 +11,9 @@
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
     
     <!-- Le styles -->
@@ -49,59 +49,68 @@
     </nav>
 
     {{# if @blog.cover }}
-      <div class="col-sm-3 sidebar hidden-xs cover" style="background: url({{@blog.cover}});">
-    {{else}}
+    <div class="col-sm-3 sidebar hidden-xs cover" style="background: url({{@blog.cover}});">
+      {{else}}
       <div class="col-sm-3 sidebar hidden-xs">
-    {{/if}}
-      <header class="sidebar-header" role="banner">
-        <a href="{{@blog.url}}">
-          <img src="{{@blog.logo}}" class="img-circle" />
-        </a>
-        <h3 class="title">
-          <a href="{{@blog.url}}/">{{@blog.title}}</a>
-        </h3>
-      </header>
-      
-      <div id="bio" class="text-center">
-        {{@blog.description}}
-      </div>
-      
-      <div id="contact-list" class="text-center">
-        <ul class="list-unstyled list-inline" id="contact-list-primary"></ul> <!-- filled with js -->
-        <ul id="contact-list-secondary" class="list-unstyled list-inline"> <!-- filled with js -->
-          <li>
-            <a class="btn btn-default btn-sm" href="{{@blog.url}}/rss">
-              <i class="fa fa-rss fa-lg"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    
-    {{! Everything else gets inserted here }}
-    
-    <div class="col-sm-9 col-sm-offset-3">
-      {{{body}}}
+        {{/if}}
+        <header class="sidebar-header" role="banner">
+          <a href="{{@blog.url}}">
+            <img src="{{@blog.logo}}" class="img-circle" />
+          </a>
+          <h3 class="title">
+            <a href="{{@blog.url}}/">{{@blog.title}}</a>
+          </h3>
+        </header>
 
-      <footer class="site-footer">
-        <hr/>
-        <div class="inner">
-          <section class="copyright">
-            <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}}
-            with <a href="#">dbyll</a> theme on <a class="icon-ghost" href="http://ghost.org">Ghost</a>.
-          </section>
+        <div id="bio" class="text-center">
+          {{@blog.description}}
         </div>
-      </footer>
-      
-      {{! Ghost outputs important scripts and data with this tag }}
-      {{ghost_foot}}
-    </div>
-    
-    <div class="clearfix"></div>
 
-    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="{{asset "js/app.js"}}"></script>
-    <script type="text/javascript" src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-    
-  </body>
-</html>
+        <div id="contact-list" class="text-center">
+          <ul class="list-unstyled list-inline" id="contact-list-primary"></ul> <!-- filled with js -->
+          <ul id="contact-list-secondary" class="list-unstyled list-inline"> <!-- filled with js -->
+            <li>
+              <a class="btn btn-default btn-sm" href="{{@blog.url}}/rss">
+                <i class="fa fa-rss fa-lg"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      {{! Everything else gets inserted here }}
+
+      <div class="col-sm-9 col-sm-offset-3">
+        {{{body}}}
+
+        <footer class="site-footer">
+          <hr/>
+          <div class="inner">
+            <section class="copyright">
+              <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}}
+              with <a href="#">dbyll</a> theme on <a class="icon-ghost" href="http://ghost.org">Ghost</a>.
+            </section>
+          </div>
+        </footer>
+
+        {{! Ghost outputs important scripts and data with this tag }}
+        {{ghost_foot}}
+      </div>
+      
+      <div class="clearfix"></div>
+
+      <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="{{asset "js/app.js"}}"></script>
+      <script type="text/javascript" src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', site.analyticsTrackId);
+        ga('send', 'pageview');
+
+      </script>
+    </body>
+  </html>
