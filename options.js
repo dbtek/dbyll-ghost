@@ -23,6 +23,6 @@ var site = {
     shortname: 'dbyll-ghost'
   },
 
-  analyticsTrackId: 'UA-46512232-5'
+  analyticsTrackId: ''
   
 }
