@@ -2,10 +2,9 @@ siteOptions = {
 
     setStyles: function(){
       $('#dbyll-options').text(
-        'h1, h2, h3, h4, h5, h6 { color:'+site.headersColor+' } '+
-        'h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color:'+site.headersColor+' !important; }'+
-        '.sidebar { background-color: ' + site.sidebar.backgroundColor + '; }'+
-        '.sidebar .title a, .sidebar #bio { color: '+site.sidebar.textColor+' !important; }'
+        '.section-title, .post-title, .post-title a { color: ' + site.headerColor + ' !important; }' +
+        '.sidebar { background-color: ' + site.sidebar.backgroundColor + '; }' +
+        '.sidebar .title a, .sidebar #bio { color: ' + site.sidebar.textColor + ' !important; }'
       );
     },
 

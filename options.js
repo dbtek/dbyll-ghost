@@ -9,7 +9,7 @@ var site = {
     backgroundColor: '#34495e',
   },
 
-  headersColor: '#E74C3C',
+  headerColor: '#e74c3c',
 
   author: {
     email: "your@email",
