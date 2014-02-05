@@ -83,3 +83,7 @@ footer .inner { padding-left: 20px; }
 .home-content {
   margin-top: 40px;
 }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Ubuntu';
+}
