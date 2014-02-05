@@ -6,7 +6,7 @@ var site = {
   
   sidebar: {
     textColor: '#fff',
-    backgroundColor: '#34495e',
+    backgroundColor: '#2c3e50',
   },
 
   headerColor: '#e74c3c',
@@ -20,7 +20,7 @@ var site = {
   },
 
   disqus: {
-    shortname: 'dbyll-ghost'
+    shortname: ''
   },
 
   analyticsTrackId: ''
