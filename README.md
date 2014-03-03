@@ -1,6 +1,7 @@
 # Dbyll
-
 Port of the open source Jekyll theme [dbyll](https://github.com/dbtek/dbyll).
+
+![Screenshot](https://raw.github.com/dbtek/dbyll-ghost/master/screenshot.png)
 
 ## Features
 ###Customized Colors
