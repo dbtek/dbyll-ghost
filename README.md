@@ -23,9 +23,11 @@ Dbyll supports Ghost logo and cover images. You can set blog's logo and sidebar 
 **Usage**
 
 Add codes in posts like one added below:
-<pre>  ```prettyprint
+```
+```prettyprint
   #code
-  ```</pre>
+```</pre>
+```
  
  
 ###Icons <i class="fa fa-flag"></i>
@@ -35,7 +37,7 @@ Dbyll is packed with Bootstrap and FontAwesome icons. You can use all Glyphicon 
 **Usage**
 
 - Add this line in your post for flag icon:
-```prettyprint lang-html
+```html
 <i class="fa fa-flag"></i>
 ```
 - Take a look at [FontAwesome](http://fontawesome.io/icons/) and [Glyphicon](http://getbootstrap.com/components/#glyphicons) sets.
@@ -49,30 +51,30 @@ You can configure theme options on *options.js* file. This file can be found on 
 
 Sample configuration bundled with theme:
 
-```prettyprint lang-js
-var site = {
+```js
+  var site = {
+    
+    sidebar: {
+      textColor: '#fff',
+      backgroundColor: '#34495e',
+    },
   
-  sidebar: {
-    textColor: '#fff',
-    backgroundColor: '#34495e',
-  },
-
-  headerColor: '#e74c3c',
-
-  author: {
-    email: "your@email",
-    github: "abc123",
-    twitter: "abc123",
-    pinterest: "abc123",
-    linkedin: "abc123"
-  },
-
-  disqus: {
-    shortname: 'dbyll-ghost'
-  },
-
-  analyticsTrackId: ''
-}
+    headerColor: '#e74c3c',
+  
+    author: {
+      email: "your@email",
+      github: "abc123",
+      twitter: "abc123",
+      pinterest: "abc123",
+      linkedin: "abc123"
+    },
+  
+    disqus: {
+      shortname: 'dbyll-ghost'
+    },
+  
+    analyticsTrackId: ''
+  }
 ```
 
 
