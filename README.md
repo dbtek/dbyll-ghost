@@ -7,7 +7,7 @@ Port of the open source Jekyll theme [dbyll](https://github.com/dbtek/dbyll) for
 ###Customized Colors
 Dbyll provides flexibilty to have customized colors. You can customize text colors, headers and sidebar background color.
 You will have it just the way you love <i class="fa fa-heart"></i>
-For more, take a look at [configuration document](http://dbyll-ghost.herokuapp.com/configuration/).
+For more, take a look at [configuration document](#configuration).
 
 ###Logo and Cover Images
 Dbyll supports Ghost logo and cover images. You can set blog's logo and sidebar cover image (background) just with a few clicks on Ghost settings.
@@ -16,7 +16,7 @@ Dbyll supports Ghost logo and cover images. You can set blog's logo and sidebar 
 **Usage**
 
 - Create a disqus account if you don't have one.  
-- Set your disqus short name on ***options.js***. Check [configuration document](http://dbyll-ghost.herokuapp.com/configuration/).
+- Set your disqus short name on ***options.js***. Check [configuration document](#configuration).
 - That's it.
 
 ###Google Code Prettify
