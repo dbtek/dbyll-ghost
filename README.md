@@ -23,11 +23,10 @@ Dbyll supports Ghost logo and cover images. You can set blog's logo and sidebar 
 **Usage**
 
 Add codes in posts like one added below:
-```
-```prettyprint
-  #code
-```</pre>
-```
+
+&#96;&#96;&#96;prettyprint  
+  #code  
+&#96;&#96;&#96;  
  
  
 ###Icons <i class="fa fa-flag"></i>
